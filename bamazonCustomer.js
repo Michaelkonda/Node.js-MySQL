@@ -45,7 +45,7 @@ function promptUserPurchase() {
         var item = input.item_id;
         var quantity = input.quantity;
         var queryStr = 'SELECT * FROM products WHERE ?';
-// here we connecting to mysql
+// here we are connecting to mysql
         connection.query(queryStr, {item_id: item}, function(err, data) {
             if (err) throw err;
 
@@ -80,7 +80,7 @@ function promptUserPurchase() {
         })
     })
 }
-
+//function to display inventory
 function displayInventory() {
 
     queryStr = 'SELECT * FROM products';
