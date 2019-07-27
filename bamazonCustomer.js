@@ -46,6 +46,7 @@ function promptUserPurchase() {
         var quantity = input.quantity;
         var queryStr = 'SELECT * FROM products WHERE ?';
 // here we are connecting to mysql
+// create if-else to check the availabilty of the product and display a message//
         connection.query(queryStr, {item_id: item}, function(err, data) {
             if (err) throw err;
 
